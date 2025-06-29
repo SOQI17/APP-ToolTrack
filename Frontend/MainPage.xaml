@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ToolTrack.MainPage"
+    Title="ToolTrack">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#2171B5" Offset="0.0" />
+            <GradientStop Color="#E4F1FB" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30"
+                             Spacing="20"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center">
+
+            <!-- Tarjeta central -->
+            <Frame Padding="20"
+                   CornerRadius="20"
+                   BackgroundColor="White"
+                   HasShadow="True"
+                   WidthRequest="500">
+
+                <VerticalStackLayout Spacing="20"
+                                     HorizontalOptions="Center">
+
+                    <Image Source="orimec.png"
+                           HeightRequest="100"
+                           HorizontalOptions="Center" />
+
+                    <Label Text="ToolTrack – Control de Herramientas"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#003366"
+                           HorizontalTextAlignment="Center" />
+
+                    <!-- Botones con estilo tarjeta -->
+                    <Button Text="Registrar herramienta"
+                            Clicked="OnRegistrarClicked"
+                            StyleClass="menuButton" />
+
+                    <Button Text="Registrar movimiento"
+                             Clicked="OnMovimientoClicked"
+                             StyleClass="menuButton" />
+
+                    
+                    <Button Text="Ver movimientos recientes"
+                            Clicked="OnMovimientosClicked"
+                            StyleClass="menuButton" />
+
+                 
+                    <Button Text="Ver inventario"
+                            Clicked="OnInventarioClicked"
+                            StyleClass="menuButton" />
+                    
+                     <Button Text="Descargar registro"
+                            Clicked="OnDescargarClicked"
+                            StyleClass="menuButton" />
+
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

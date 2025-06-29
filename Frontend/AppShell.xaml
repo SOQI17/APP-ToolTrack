@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ToolTrack.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ToolTrack"
+    xmlns:pages="clr-namespace:ToolTrack.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Title="ToolTrack">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Registrar Herramienta"
+        ContentTemplate="{DataTemplate pages:RegistrarHerramientaPage}"
+        Route="RegistrarHerramientaPage" />
+
+    <ShellContent
+        Title="Registrar Movimiento"
+        ContentTemplate="{DataTemplate pages:RegistrarMovimientoPage}"
+        Route="RegistrarMovimientoPage" />
+
+    <ShellContent
+        Title="Ver Movimientos"
+        ContentTemplate="{DataTemplate pages:VerMovimientosPage}"
+        Route="VerMovimientosPage" />
+
+    <ShellContent
+        Title="Ver Inventario"
+        ContentTemplate="{DataTemplate pages:VerInventarioPage}"
+        Route="VerInventarioPage" />
+
+</Shell>
